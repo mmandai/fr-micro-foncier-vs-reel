@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micro-foncier vs Régime Réel 2026 — Déficit foncier, seuil, simulation</title>
+<meta name="description" content="Micro-foncier vs régime réel foncier en 2026 — seuil des 15 000 €, déficit foncier, quand le réel est plus avantageux et comment calculer votre imposition. Mis à jour 2026.">
+<link rel="canonical" href="https://mmandai.github.io/fr-micro-foncier-vs-reel/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-53M2RMSY9Q"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-53M2RMSY9Q');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Micro-foncier vs Régime Réel 2026","url":"https://mmandai.github.io/fr-micro-foncier-vs-reel/","inLanguage":"fr","publisher":{"@type":"Organization","name":"MMDAI","url":"https://mmandai.github.io"},"dateModified":"2026-05-18"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MMDAI","item":"https://mmandai.github.io"},{"@type":"ListItem","position":2,"name":"Micro-foncier vs Réel","item":"https://mmandai.github.io/fr-micro-foncier-vs-reel/"}]}]}</script>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;}
+body{background:#fafaf9;color:#0f1117;font-family:'Manrope',sans-serif;font-size:15px;line-height:1.6;overflow-x:hidden;}
+:root{
+  --violet:#6C3FC7;--violet2:#5730a8;
+  --ink:#0f1117;--ink2:#3a3f4d;--ink3:#7a8099;
+  --paper:#fafaf9;--paper2:#ece8f7;--white:#fff;--rule:#dbd6f0;
+  --indigo:#1A1040;--green:#16a34a;--red:#dc2626;--amber:#d97706;
+  --sans:'Manrope',sans-serif;--mono:'DM Mono',monospace;
+}
+.site-header{background:#1A1040;border-bottom:1px solid rgba(255,255,255,.08);padding:14px 0;position:sticky;top:0;z-index:200;}
+.hd-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Manrope',sans-serif;font-size:18px;font-weight:800;color:#fff;text-decoration:none;}
+.logo em{color:#6C3FC7;font-style:normal;}
+.hd-nav a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;}
+.hd-nav a:hover{color:#fff;}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1A1040;padding:16px 24px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;font-size:13px;}
+.cookie-banner p{max-width:560px;text-align:center;color:rgba(255,255,255,.7);}
+.cookie-banner a{color:#fff;text-decoration:underline;}
+.cookie-btn{padding:8px 20px;border-radius:40px;font-size:13px;font-weight:700;cursor:pointer;border:none;}
+.cookie-accept{background:#6C3FC7;color:#fff;}
+.cookie-reject{background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3)!important;}
+.cookie-buttons{display:flex;gap:8px;}
+@media(max-width:600px){.cookie-banner{flex-direction:column;text-align:center;}}
+.hero{padding:64px 24px 52px;border-bottom:1px solid rgba(255,255,255,.08);text-align:center;background:#1A1040;}
+.hero-kicker{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6C3FC7;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.hero-kicker::before,.hero-kicker::after{content:'';display:inline-block;width:24px;height:1px;background:#6C3FC7;}
+.hero h1{font-family:'Manrope',sans-serif;font-size:clamp(30px,4vw,56px);font-weight:800;line-height:1.08;letter-spacing:-.02em;color:#fff;margin-bottom:20px;}
+.hero h1 em{font-style:italic;color:#6C3FC7;}
+.hero-lead{font-size:17px;color:rgba(255,255,255,.7);line-height:1.7;max-width:600px;margin:0 auto 28px;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+.pill{font-size:12px;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:5px 12px;}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+.page-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;padding:52px 0 80px;align-items:start;}
+@media(max-width:900px){
+  .page-layout{display:block;padding:32px 0 40px;}
+  .page-layout > .article{display:block;margin-bottom:32px;}
+  .page-layout > .sidebar{display:block;clear:both;}
+}
+@media(max-width:560px){.wrap{padding:0 16px;}}
+.article h2{font-family:'Manrope',sans-serif;font-size:26px;font-weight:800;color:#0f1117;margin:40px 0 14px;letter-spacing:-.02em;text-align:center;}
+.article h3{text-align:center;}
+.article{max-width:100%;text-align:center;}.article h2:first-child{margin-top:0;}
+.article h3{font-size:16px;font-weight:700;color:#0f1117;margin:28px 0 10px;}
+.article p{font-size:15px;color:#3a3f4d;line-height:1.8;margin-bottom:14px;}
+.article p a{color:#5730a8;text-decoration:underline;text-underline-offset:3px;}
+.article strong{color:#0f1117;font-weight:700;}
+.example-box{background:#fff;border:1px solid #dbd6f0;border-left:3px solid #6C3FC7;border-radius:0 14px 14px 0;padding:20px 24px;margin:20px 0;}
+.ex-label{font-family:'DM Mono',monospace;font-size:10px;color:#5730a8;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #dbd6f0;font-size:14px;color:#3a3f4d;}
+.ex-row:last-child{border-bottom:none;font-weight:700;color:#0f1117;}
+.ex-row span:last-child{font-family:'DM Mono',monospace;font-size:13px;white-space:normal;text-align:right;}
+.ex-neg{color:#dc2626;}
+.ex-pos{color:#16a34a;}
+.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:20px 0;}
+.data-table{width:100%;min-width:320px;border-collapse:collapse;font-size:14px;}
+.data-table th{background:#ece8f7;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7a8099;padding:10px 14px;text-align:center;border-bottom:2px solid #dbd6f0;white-space:nowrap;}
+.data-table td{padding:11px 14px;border-bottom:1px solid #dbd6f0;color:#3a3f4d;vertical-align:top;text-align:center;word-break:break-word;}
+.data-table tr:last-child td{border-bottom:none;}
+@media(max-width:600px){
+  .data-table{table-layout:fixed;font-size:12px;}
+  .data-table th,.data-table td{padding:8px 8px;white-space:normal;word-break:break-word;}
+}
+.data-table .good{color:#16a34a;font-weight:700;}
+.data-table .bad{color:#dc2626;font-weight:700;}
+.data-table .mid{color:#d97706;font-weight:700;}
+.data-table .hl{background:rgba(108,63,199,.07);font-weight:700;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+@media(max-width:600px){.two-col{grid-template-columns:1fr;}}
+.col-card{background:#fff;border:1px solid #dbd6f0;border-radius:14px;padding:20px;text-align:center;}
+.col-card h3{font-family:'Manrope',sans-serif;font-size:17px;font-weight:800;margin-bottom:12px;color:#0f1117;}
+.col-card ul{display:block;text-align:center;margin:0 auto;padding:0;list-style:none;}
+.col-card ul li{font-size:13px;color:#3a3f4d;line-height:1.8;padding-left:0;}
+.col-card ul li::before{content:none;}
+.verdict{background:rgba(108,63,199,.06);border:1px solid rgba(108,63,199,.2);border-radius:14px;padding:20px 24px;margin:28px 0;}
+.verdict-label{font-family:'DM Mono',monospace;font-size:10px;color:#5730a8;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;text-align:center;}
+.verdict p{font-size:15px;color:#3a3f4d;line-height:1.7;margin:0;}
+.faq-section{margin-top:40px;}
+.faq-section h2{text-align:center;}
+.faq-item{border-bottom:1px solid #dbd6f0;}
+.faq-item summary{font-size:15px;font-weight:600;color:#0f1117;padding:16px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-item summary::after{content:'+';font-size:20px;color:#6C3FC7;flex-shrink:0;transition:transform .2s;}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-body{font-size:14px;color:#3a3f4d;line-height:1.8;padding:0 0 16px;text-align:left;}
+.faq-body a{color:#5730a8;text-decoration:underline;text-underline-offset:3px;}
+.sidebar{display:flex;flex-direction:column;gap:16px;text-align:center;}
+@media(min-width:901px){.sidebar{position:sticky;top:90px;align-self:start;}}
+@media(max-width:900px){.sidebar{position:static !important;top:auto !important;}.side-card h3,.side-card p,.side-links,.side-btn{text-align:center;}}
+.side-card{background:#fff;border:1px solid #dbd6f0;border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.07);}
+.side-card h3{font-family:'Manrope',sans-serif;font-size:17px;font-weight:800;color:#6C3FC7;margin-bottom:8px;}
+.side-card p{font-size:13px;color:#7a8099;line-height:1.6;margin-bottom:14px;}
+.side-btn{display:block;text-align:center;background:#6C3FC7;color:#fff;font-weight:700;font-size:13px;padding:10px 16px;border-radius:8px;text-decoration:none;margin-bottom:6px;}
+.side-btn.outline{background:transparent;border:1px solid #dbd6f0;color:#3a3f4d;}
+.side-links{display:flex;flex-direction:column;gap:6px;margin-top:4px;text-align:center;}
+.side-links a{font-size:13px;color:#3a3f4d;text-decoration:none;padding:7px 10px;border-radius:8px;background:#ece8f7;display:flex;justify-content:center;align-items:center;text-align:center;}
+.side-links a:hover{background:#dbd6f0;}
+footer{background:#1A1040;color:rgba(255,255,255,.5);padding:40px 0;text-align:center;}
+.footer-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.footer-logo{font-weight:800;font-size:18px;color:#fff;}
+.footer-logo em{color:#6C3FC7;font-style:normal;}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;font-weight:500;}
+.footer-links a:hover{color:#fff;}
+.footer-disc{font-size:11px;color:rgba(255,255,255,.25);max-width:700px;line-height:1.7;border-top:1px solid rgba(255,255,255,.08);padding-top:16px;}
+@media(max-width:900px){
+  .article h2,.article h3,.article p,.verdict p,.faq-section h2{text-align:center;}
+  .side-card{text-align:center;}
+  .side-links a{justify-content:center;}
+  .faq-item summary{text-align:left;}
+  .faq-body{text-align:left;}
+  .ex-row{text-align:left;}
+}
+</style>
+</head>
+<body>
+<div class="cookie-banner" id="cookieBanner" style="display:none;">
+  <p>Nous utilisons des cookies de Google Analytics et Google AdSense. Voir notre <a href="https://mmandai.github.io/privacy/">Politique de confidentialité</a>.</p>
+  <div class="cookie-buttons">
+    <button class="cookie-btn cookie-accept" onclick="setCookieConsent('accepted')">Accepter</button>
+    <button class="cookie-btn cookie-reject" onclick="setCookieConsent('rejected')">Refuser</button>
+  </div>
+</div>
+<header class="site-header">
+  <div class="hd-inner">
+    <a href="https://mmandai.github.io" class="logo">MM<em>DAI</em></a>
+    <nav class="hd-nav"><a href="https://mmandai.github.io/about/">À propos</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-kicker">Fiscalité locative FR · 2026</div>
+  <h1>Micro-foncier vs <em>Régime réel</em></h1>
+  <p class="hero-lead">Abattement forfaitaire 30 % ou déduction réelle des charges — seuil des 15 000 €, déficit foncier et le point de bascule exact selon vos charges.</p>
+  <div class="hero-pills"><span class="pill">Seuil 15 000 €</span><span class="pill">Abattement 30 %</span><span class="pill">Déficit foncier</span><span class="pill">10 700 €/an imputable</span></div>
+</section>
+
+<div class="wrap">
+<div class="page-layout">
+<article class="article">
+
+<h2>Les deux régimes en un coup d'œil</h2>
+<p>Les revenus fonciers — loyers issus de locations nues (non meublées) — sont imposés à l'IR dans la catégorie des revenus fonciers. Deux régimes coexistent : le <strong>micro-foncier</strong>, simplifié, avec un abattement forfaitaire de 30 %, et le <strong>régime réel</strong>, qui permet de déduire l'ensemble des charges réelles. Le choix entre les deux repose sur un calcul simple : si vos charges dépassent 30 % de vos revenus, le réel est plus avantageux.</p>
+<p>Important : ces régimes s'appliquent uniquement à la <strong>location nue</strong>. La location meublée (LMNP) relève du régime BIC, non des revenus fonciers.</p>
+
+<h2>Micro-foncier — conditions et fonctionnement</h2>
+<p>Le micro-foncier est accessible automatiquement si vos revenus fonciers bruts annuels ne dépassent pas <strong>15 000 €</strong>. Au-delà, vous basculez obligatoirement au régime réel. En dessous du seuil, vous pouvez choisir l'un ou l'autre — avec engagement de 3 ans si vous optez pour le réel.</p>
+
+<div class="example-box">
+<div class="ex-label">Micro-foncier — loyers 12 000 €/an</div>
+<div class="ex-row"><span>Revenus fonciers bruts</span><span>12 000 €</span></div>
+<div class="ex-row"><span>Abattement forfaitaire 30 %</span><span class="ex-neg">−3 600 €</span></div>
+<div class="ex-row"><span>Revenu foncier net imposable</span><span>8 400 €</span></div>
+<div class="ex-row"><span>Impôt IR (TMI 30 %)</span><span class="ex-neg">2 520 €</span></div>
+<div class="ex-row"><span>Prélèvements sociaux 17,2 %</span><span class="ex-neg">1 445 €</span></div>
+<div class="ex-row"><span>Total impôts + PS</span><span class="ex-neg">3 965 €</span></div>
+</div>
+
+<h2>Régime réel — charges déductibles</h2>
+<p>Au régime réel, vous déduisez l'ensemble des charges effectives. La liste est large et souvent sous-exploitée par les propriétaires :</p>
+
+<div class="two-col">
+  <div class="col-card">
+    <h3>Charges déductibles</h3>
+    <ul>
+      <li>Intérêts d'emprunt et frais de dossier</li>
+      <li>Taxe foncière (hors ordures ménagères)</li>
+      <li>Primes d'assurance (PNO, GLI)</li>
+      <li>Frais de gestion et d'agence</li>
+      <li>Travaux d'entretien et de réparation</li>
+      <li>Frais de copropriété (charges récupérables exclues)</li>
+      <li>Honoraires d'expert-comptable</li>
+    </ul>
+  </div>
+  <div class="col-card">
+    <h3>Non déductibles au réel</h3>
+    <ul>
+      <li>Travaux de construction ou d'agrandissement</li>
+      <li>Amortissement du bien (location nue)</li>
+      <li>Charges récupérables sur le locataire</li>
+      <li>Remboursement du capital d'emprunt</li>
+      <li>Dépenses financées par subvention</li>
+      <li>Frais personnels non liés à la location</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Le point de bascule — quand le réel devient plus avantageux</h2>
+<p>Le micro-foncier applique 30 % d'abattement forfaitaire. Le régime réel est donc plus avantageux dès que vos charges déductibles dépassent 30 % de vos revenus bruts. En dessous, le micro est plus simple et souvent suffisant.</p>
+
+<div class="example-box">
+<div class="ex-label">Comparaison — loyers 12 000 €, charges réelles 5 000 € (42 %)</div>
+<div class="ex-row"><span>Micro-foncier — base imposable (−30 %)</span><span>8 400 €</span></div>
+<div class="ex-row"><span>Régime réel — base imposable (−5 000 €)</span><span>7 000 €</span></div>
+<div class="ex-row"><span>Différence de base imposable</span><span class="ex-pos">−1 400 €</span></div>
+<div class="ex-row"><span>Économie d'impôt IR + PS (TMI 30 %, 47,2 % total)</span><span class="ex-pos">~661 €/an</span></div>
+</div>
+
+<h2>Le déficit foncier — l'arme fiscale du régime réel</h2>
+<p>C'est l'atout majeur du régime réel. Si vos charges déductibles dépassent vos revenus fonciers, vous créez un <strong>déficit foncier</strong>, imputable sur votre revenu global à hauteur de <strong>10 700 € par an</strong> (plafond porté à 21 400 € pour certains travaux de rénovation énergétique). Le surplus est reportable sur les revenus fonciers des 10 années suivantes.</p>
+
+<div class="example-box">
+<div class="ex-label">Déficit foncier — loyers 8 000 €, charges 20 000 € (travaux)</div>
+<div class="ex-row"><span>Revenus fonciers</span><span>8 000 €</span></div>
+<div class="ex-row"><span>Charges déductibles (dont travaux)</span><span class="ex-neg">−20 000 €</span></div>
+<div class="ex-row"><span>Déficit foncier généré</span><span class="ex-neg">−12 000 €</span></div>
+<div class="ex-row"><span>Imputable sur revenu global (plafond 10 700 €)</span><span class="ex-pos">−10 700 €</span></div>
+<div class="ex-row"><span>Report sur revenus fonciers futurs</span><span class="ex-pos">−1 300 € (10 ans)</span></div>
+<div class="ex-row"><span>Économie IR @ TMI 30 % + PS sur 10 700 €</span><span class="ex-pos">~5 050 €</span></div>
+</div>
+
+<h2>Tableau de décision — micro ou réel ?</h2>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>Situation</th><th>Régime conseillé</th><th>Raison</th></tr></thead>
+<tbody>
+<tr><td>Revenus > 15 000 €/an</td><td class="bad">Réel obligatoire</td><td>Pas le choix</td></tr>
+<tr><td>Charges < 30 % des loyers</td><td class="good">Micro-foncier</td><td>Abattement > charges réelles</td></tr>
+<tr><td>Charges 30–50 % des loyers</td><td class="mid">Réel conseillé</td><td>Déduction supérieure à 30 %</td></tr>
+<tr><td>Gros travaux à venir</td><td class="good">Réel impératif</td><td>Déficit foncier imputable</td></tr>
+<tr><td>Crédit immobilier avec intérêts élevés</td><td class="good">Réel conseillé</td><td>Intérêts déductibles</td></tr>
+<tr><td>Bien récent sans charges importantes</td><td class="good">Micro-foncier</td><td>Simplicité + abattement suffisant</td></tr>
+</tbody>
+</table></div>
+
+<div class="verdict">
+<div class="verdict-label">Conclusion</div>
+<p>Le micro-foncier est idéal pour les propriétaires avec peu de charges et des revenus sous 15 000 € — simplicité maximale, pas de comptabilité. Le régime réel s'impose dès que vos charges réelles dépassent 30 % des loyers, ou dès que vous avez des travaux significatifs à réaliser. <strong>Le déficit foncier est l'un des rares mécanismes permettant de réduire l'IR sur d'autres revenus</strong> — à ne pas négliger si vous êtes dans une tranche marginale élevée.</p>
+</div>
+
+<div class="faq-section"><h2>Questions fréquentes</h2>
+<details class="faq-item"><summary>Peut-on passer du micro-foncier au réel et inversement ?</summary>
+<div class="faq-body">Oui, mais avec contraintes. L'option pour le régime réel est valable 3 ans et reconductible tacitement. Elle ne peut pas être révoquée avant ce délai. À l'inverse, si vous êtes au micro-foncier et passez au-dessus de 15 000 €, le basculement au réel est automatique et obligatoire. En dessous du seuil, le micro s'applique de plein droit sauf option expresse pour le réel.</div></details>
+<details class="faq-item"><summary>Les travaux de rénovation énergétique sont-ils déductibles ?</summary>
+<div class="faq-body">Oui — les travaux d'entretien et de réparation sont déductibles au régime réel. Pour les travaux de rénovation énergétique réalisés dans des logements classés E, F ou G (passoires thermiques), le plafond du déficit foncier imputable sur le revenu global est doublé à 21 400 € (sous conditions, jusqu'en 2025 initialement, prolongé). Les travaux de construction ou d'agrandissement restent non déductibles.</div></details>
+<details class="faq-item"><summary>Comment déclarer les revenus fonciers en régime réel ?</summary>
+<div class="faq-body">Au régime réel, les revenus fonciers sont déclarés sur le formulaire 2044 (ou 2044 SPE pour certains dispositifs). Ce formulaire détaille l'ensemble des recettes et charges déductibles. Le résultat (bénéfice ou déficit) est reporté sur la déclaration 2042. Le recours à un expert-comptable ou à un logiciel spécialisé est recommandé pour optimiser les déductions et éviter les erreurs.</div></details>
+<details class="faq-item"><summary>Le déficit foncier peut-il s'imputer sur tous les revenus ?</summary>
+<div class="faq-body">Partiellement. La fraction du déficit provenant des intérêts d'emprunt ne peut s'imputer que sur les revenus fonciers des 10 années suivantes — pas sur le revenu global. Seule la partie du déficit générée par les autres charges (travaux, gestion, assurance, taxe foncière) est imputable sur le revenu global, dans la limite de 10 700 € par an. Cette distinction est souvent mal comprise et source d'erreurs déclaratives.</div></details>
+<details class="faq-item"><summary>Le micro-foncier est-il compatible avec un dispositif de défiscalisation ?</summary>
+<div class="faq-body">Non pour la plupart des dispositifs. Les logements bénéficiant de réductions d'impôt liées à un régime spécial (Denormandie, Malraux, Monuments Historiques, déficit foncier spécial) sont exclus du micro-foncier. Ils relèvent obligatoirement du régime réel. Vérifiez toujours la compatibilité avant d'acquérir un bien sous dispositif fiscal particulier.</div></details>
+</div>
+</article>
+
+<aside class="sidebar">
+<div class="side-card">
+<h3>Articles liés</h3>
+<div class="side-links">
+<a href="https://mmandai.github.io/fr-lmnp-vs-sci/">LMNP vs SCI IS</a>
+<a href="https://mmandai.github.io/fr-plus-value-expliquee/">Plus-value expliquée</a>
+</div></div>
+<div class="side-card">
+<h3>Calculateur de rendement</h3>
+<p>Comparez micro-foncier et régime réel sur votre bien — rendement net après impôts et prélèvements sociaux.</p>
+<a href="https://mmandai.github.io/fr-rendement-locatif/" class="side-btn">Ouvrir le calculateur</a>
+<a href="https://imemyselfai.gumroad.com/l/frrendementlocatif" class="side-btn outline">Télécharger Excel</a>
+</div>
+<div class="side-card">
+<h3>Calculateurs FR</h3>
+<div class="side-links">
+<a href="https://mmandai.github.io/fr-plus-value-immobiliere/">Plus-value immobilière</a>
+</div></div>
+</aside>
+</div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">MM<em>DAI</em></div>
+    <div class="footer-links">
+      <a href="https://mmandai.github.io/#fr">Calculateurs FR</a>
+      <a href="https://mmandai.github.io/fr-glossaire/">Glossaire FR</a>
+      <a href="https://mmandai.github.io/methodology/">Comment ça marche</a>
+      <a href="https://mmandai.github.io/about/">À propos</a>
+      <a href="https://mmandai.github.io/privacy/">Confidentialité</a>
+    </div>
+    <p class="footer-disc">À titre informatif uniquement. Ne constitue pas un conseil fiscal ou financier. MMDAI — dernière mise à jour mai 2026.</p>
+  </div>
+</footer>
+<script>
+function setCookieConsent(c){localStorage.setItem('cookieConsent',c);document.getElementById('cookieBanner').style.display='none';}
+if(!localStorage.getItem('cookieConsent')){document.getElementById('cookieBanner').style.display='flex';}
+document.querySelectorAll('.faq-item').forEach(i=>{i.addEventListener('toggle',()=>{if(i.open)document.querySelectorAll('.faq-item').forEach(o=>{if(o!==i&&o.open)o.removeAttribute('open');});});});
+</script>
+</body>
+</html>
